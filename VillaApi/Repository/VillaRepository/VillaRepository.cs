@@ -4,7 +4,7 @@ using VillaApi.Data;
 using VillaApi.Models;
 using VillaApi.Repository.IRepository;
 
-namespace VillaApi.Repository
+namespace VillaApi.Repository.VillaRepository
 {
     public class VillaRepository : Repository<Villa>, IVillaRepository
     {

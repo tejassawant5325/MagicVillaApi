@@ -1,9 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 using VillaApi.Data;
-using VillaApi.Repository.IRepository;
 
-namespace VillaApi.Repository
+namespace VillaApi.Repository.IRepository
 {
     public class Repository<T> : IRepository<T> where T : class
     {
@@ -12,7 +11,7 @@ namespace VillaApi.Repository
         public Repository(ApplicationDbContext db)
         {
             _db = db;
-            this.dbSet = _db.Set<T>();
+            dbSet = _db.Set<T>();
         }
 
         public async Task CreateAsync(T entity)

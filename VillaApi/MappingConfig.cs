@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using VillaApi.Models;
-using VillaApi.Models.DTO;
+using VillaApi.Models.DTO.VillaDTOs;
 
 namespace VillaApi
 {

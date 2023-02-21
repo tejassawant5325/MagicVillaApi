@@ -3,8 +3,8 @@ using Serilog;
 using VillaApi;
 using VillaApi.Data;
 using VillaApi.Logging;
-using VillaApi.Repository;
-using VillaApi.Repository.IRepository;
+using VillaApi.Repository.VillaNumberRepository;
+using VillaApi.Repository.VillaRepository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,6 +26,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(option =>
 //Auto Mapper
 builder.Services.AddAutoMapper(typeof(MappingConfig));
 builder.Services.AddScoped<IVillaRepository, VillaRepository>();
+builder.Services.AddScoped<IVillaNumberRepository,VillaNumberRepository>();    
+
 builder.Services.AddControllers(option =>
 {
     //option.ReturnHttpNotAcceptable = true;

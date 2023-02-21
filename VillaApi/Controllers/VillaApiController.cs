@@ -6,8 +6,8 @@ using System.Net;
 using VillaApi.Data;
 using VillaApi.Logging;
 using VillaApi.Models;
-using VillaApi.Models.DTO;
-using VillaApi.Repository.IRepository;
+using VillaApi.Models.DTO.VillaDTOs;
+using VillaApi.Repository.VillaRepository;
 
 namespace VillaApi.Controllers
 {

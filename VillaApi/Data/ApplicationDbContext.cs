@@ -10,23 +10,24 @@ namespace VillaApi.Data
         }
 
         public DbSet<Villa> Villas { get; set; }
+        public DbSet<VillaNumber> VillaNumbers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Villa>().HasData(
 
               new Villa
-               {
-                   Id = 1,
-                   Name = "Royal Villa",
-                   Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
-                   ImageUrl = "https://dotnetmasteryimages.blob.core.windows.net/bluevillaimages/villa3.jpg",
-                   Occupancy = 4,
-                   Rate = 200,
-                   Sqft = 550,
-                   Amentity = "",
-                   CreatedDate = DateTime.Now
-               },
+              {
+                  Id = 1,
+                  Name = "Royal Villa",
+                  Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
+                  ImageUrl = "https://dotnetmasteryimages.blob.core.windows.net/bluevillaimages/villa3.jpg",
+                  Occupancy = 4,
+                  Rate = 200,
+                  Sqft = 550,
+                  Amentity = "",
+                  CreatedDate = DateTime.Now
+              },
               new Villa
               {
                   Id = 2,
