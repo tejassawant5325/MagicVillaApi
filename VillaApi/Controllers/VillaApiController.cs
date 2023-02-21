@@ -34,7 +34,7 @@ namespace VillaApi.Controllers
         {
             _logger.LogInformation("Getting All Villas");
             IEnumerable<Villa> villaList = await _db.Villas.ToListAsync();
-            return Ok(_mapper.Map<VillaDTO>(villaList));
+            return Ok(_mapper.Map<List<VillaDTO>>(villaList));
         }
 
 
